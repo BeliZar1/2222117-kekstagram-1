@@ -1,4 +1,4 @@
-import {addThumbnails} from './thumbnails.js';
+import {renderThumbnails} from './thumbnails.js';
 import {setFilter, showFilters, TIMEOUT_DELAY} from './filters.js';
 import {thumbnailClickHandler} from './pictures.js';
 
@@ -30,9 +30,9 @@ const shuffleArray = (array) => {
 
 const onSuccess = (data) => {
   const photos = data.slice();
-  addThumbnails(photos);
+  renderThumbnails(photos);
   showFilters();
-  setFilter(debounce((filterData) => addThumbnails(filterData(data)), TIMEOUT_DELAY));
+  setFilter(debounce((filterData) => renderThumbnails(filterData(data)), TIMEOUT_DELAY));
   thumbnailClickHandler(data);
   document.querySelector('.img-filters').classList.remove('img-filters--inactive');
 };

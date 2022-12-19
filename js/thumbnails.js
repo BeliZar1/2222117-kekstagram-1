@@ -8,7 +8,7 @@ const clearPictures = () => {
   pictureList.forEach((picture) => picture.remove());
 };
 
-const addThumbnails = (photos) => {
+const renderThumbnails = (photos) => {
   clearPictures();
   for (let i = 0; i < photos.length; i++) {
     const photo = photos[i];
@@ -23,4 +23,4 @@ const addThumbnails = (photos) => {
 
 };
 
-export {addThumbnails};
+export {renderThumbnails};

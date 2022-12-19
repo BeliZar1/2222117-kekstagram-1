@@ -1,4 +1,4 @@
-import {shuffleArray} from './utils.js';
+import {shuffleArray} from './util.js';
 
 const TIMEOUT_DELAY = 500;
 const MAX_RANDOM_IMG_COUNT = 10;
